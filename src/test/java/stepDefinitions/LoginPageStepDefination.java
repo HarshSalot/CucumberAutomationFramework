@@ -122,7 +122,8 @@ public class LoginPageStepDefination {
 	public void login_with_excel_data(String excelsheet) throws IOException {
 	    String path = "src/test/resources/testdata/"+excelsheet;
 	    List<Map<String, String>> data = ExcelUtils.readExcelData(path, "LoginData");
-
+	    String URL = testContextSetup.driver.getCurrentUrl();
+	    System.out.println(URL);
 	    for (int i = 0; i < data.size(); i++) {
 	        Map<String, String> row = data.get(i);
 	        String username = row.get("Username");
@@ -154,7 +155,7 @@ public class LoginPageStepDefination {
 	        }
 
 	        ExcelUtils.writeResult(path, "LoginData", i + 1, expected, result);
-	       // testContextSetup.driver.get("https://spec.uat.atssoftware.com/login");
+	        testContextSetup.driver.get(URL);
 	    }
 	}
 }
