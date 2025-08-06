@@ -1,0 +1,8 @@
+/target/
+*.class
+*.log
+*.xlsx
+*.properties
+.idea/
+.DS_Store
+*.iml
