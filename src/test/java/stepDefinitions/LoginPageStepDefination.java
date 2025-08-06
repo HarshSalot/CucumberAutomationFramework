@@ -154,7 +154,7 @@ public class LoginPageStepDefination {
 	        }
 
 	        ExcelUtils.writeResult(path, "LoginData", i + 1, expected, result);
-	        testContextSetup.driver.get("https://spec.uat.atssoftware.com/login");
+	       // testContextSetup.driver.get("https://spec.uat.atssoftware.com/login");
 	    }
 	}
 }
